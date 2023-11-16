@@ -13,8 +13,15 @@ The primary objective of this endeavor is to construct an interpreter capable of
 - Gain hands-on experience in handling ByteCode instructions.
 
 ## Structure
-`main.c`: Main program entry point. \
-`monty.h`: Header file containing function prototypes and structures.
+`main.c`: main program entry point. \
+`monty.h`: header file containing function prototypes and structures. \
+`process.c`: functions related to the processing of instructions. \
+`call_instruction_handler.c`: function that determinate which handler to call. \
+`stack_ops.c`: holds stack manipulation functions. \
+`memory.c`: contains clean up functions. \
+`helper_functions.c`: containes some shared utility functions. \
+`[opcode handlers]`: each function in a separate file, such as **push**, **pall** \
+`/bytecodes`: directory containes *".m"* test files.
 
 ## Monty 0.98 & Monty byte code files
 `Monty 0.98` is a language like Python. It turns scripts into Monty byte codes and uses its own set of instructions to work with a special stack.
@@ -35,7 +42,7 @@ pall$
 ## How to Use
 Compile the code using gcc or another preferred compiler.
 ```bash
- gcc -Wall -Werror -Wextra -pedantic *.c -o monty.
+ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ```
 Execute the interpreter by providing the Monty ByteCode file as an argument.
 ```bash
@@ -51,3 +58,4 @@ Execute the interpreter by providing the Monty ByteCode file as an argument.
 ## Author
 **Twitter:** https://twitter.com/_ELOUARDY \
 **Email:** ouadia@elouardy.com
+

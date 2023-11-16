@@ -1,3 +1,6 @@
+# Ignore "monty" executable
+monty
+
 # Ignore .out files
 *.out
 
