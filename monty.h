@@ -57,7 +57,7 @@ typedef struct shared_data_s
 	char *arg;
 	FILE *file;
 } shared_data_t;
-extern shared_data_t shared_data;
+extern shared_data_t sd; /* extern global variable */
 
 
 /* processing functions */
@@ -81,3 +81,4 @@ void free_stack(stack_t *head);
 /* shared_data struct intializer */
 #define SHARED_DATA_INIT { NULL, NULL, 0, NULL, NULL, NULL }
 #endif
+

@@ -7,17 +7,18 @@
 void process_instruction(void)
 {
 	/* set opcode & argument shared variables */
-	shared_data.opcode = strtok(shared_data.line_content, " \n\t");
-	shared_data.arg = strtok(NULL, " \n\t");
+	sd.opcode = strtok(sd.line_content, " \n\t");
+	sd.arg = strtok(NULL, " \n\t");
 
-	if (shared_data.opcode == NULL) /* blank line */
+	if (sd.opcode == NULL) /* blank line */
 		return;
 
 	/*
-	 * printf("%d -> opcode = %s | arg = %s\n", shared_data.nb_line, \
-	 * shared_data.opcode, shared_data.arg);
+	 * printf("%d -> opcode = %s | arg = %s\n", sd.nb_line, \
+	 * sd.opcode, sd.arg);
 	 */
 
 	/* call the right instruction handler */
-	call_instruction_handler(shared_data.opcode, shared_data.arg);
+	call_instruction_handler(sd.opcode, sd.arg);
 }
+

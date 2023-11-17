@@ -14,8 +14,8 @@ void push_stack(stack_t **head, int value)
 	if (new_node == NULL) /* failed */
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		fclose(shared_data.file);
-		free(shared_data.line_content);
+		fclose(sd.file);
+		free(sd.line_content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
@@ -35,3 +35,4 @@ void push_stack(stack_t **head, int value)
 		*head = new_node;
 	}
 }
+

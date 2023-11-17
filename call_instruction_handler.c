@@ -23,18 +23,16 @@ void call_instruction_handler(char *opcode, char *arg)
 		if (strcmp(op_codes[i].opcode, opcode) == 0)
 		{
 			/* call the handler */
-			op_codes[i].f(&shared_data.stack, shared_data.nb_line);
+			op_codes[i].f(&sd.stack, sd.nb_line);
 			return;
 		}
 	}
 
 	/* if no match found, print error message and release ressources */
-	char *err_format;
-
-	err_format = "L%d: unknown instruction %s\n";
-	fprintf(stderr, err_format, shared_data.nb_line, shared_data.opcode);
-	fclose(shared_data.file);
-	free(shared_data.line_content);
-	free_stack(shared_data.stack);
+	fprintf(stderr, "L%d: unknown instruction %s\n", sd.nb_line, sd.opcode);
+	fclose(sd.file);
+	free(sd.line_content);
+	free_stack(sd.stack);
 	exit(EXIT_FAILURE);
 }
+

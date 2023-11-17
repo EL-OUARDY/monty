@@ -19,3 +19,4 @@ void pall_func(stack_t **stack, unsigned int line_number)
 		_stack = _stack->next;
 	}
 }
+
