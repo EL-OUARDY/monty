@@ -1,3 +1,6 @@
+# Ignore quick push bash script
+quick_push.sh
+
 # Ignore "monty" executable
 monty
 

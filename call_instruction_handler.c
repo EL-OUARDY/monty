@@ -17,6 +17,9 @@ void call_instruction_handler(char *opcode, char *arg)
 		{"add", add_func},
 		{"nop", nop_func},
 		{"sub", sub_func},
+		{"div", div_func},
+		{"mul", mul_func},
+		{"mod", mod_func},
 	};
 	(void)arg;
 
