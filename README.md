@@ -58,6 +58,8 @@ Execute the interpreter by providing the Monty ByteCode file as an argument.
 |`pop`    | Removes the top element of the stack |
 |`swap`   | swaps the top two elements of the stack |
 |`add`    | adds the top two elements of the stack |
+|`nop`    | do nothing |
+|`sub`    | subtracts the top element of the stack from the second top element of the stack |
 
 ## Author
 **Twitter:** https://twitter.com/_ELOUARDY \
