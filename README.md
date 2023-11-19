@@ -52,10 +52,10 @@ Execute the interpreter by providing the Monty ByteCode file as an argument.
 ## Operation codes
 | Opcode | Description |
 |------------------- | --------------|
-|`push`   | Pushes an element to the stack |
-|`pall`   | Prints all the values on the stack, starting from the top |
-|`pint`   | Prints the value at the top of the stack |
-|`pop`    | Removes the top element of the stack |
+|`push`   | pushes an element to the stack |
+|`pall`   | prints all the values on the stack, starting from the top |
+|`pint`   | prints the value at the top of the stack |
+|`pop`    | removes the top element of the stack |
 |`swap`   | swaps the top two elements of the stack |
 |`add`    | adds the top two elements of the stack |
 |`nop`    | do nothing |
@@ -65,6 +65,7 @@ Execute the interpreter by providing the Monty ByteCode file as an argument.
 |`mod`    | computes the rest of the division of the second top element of the stack by the top element of the stack |
 |`pchar`  | prints the char at the top of the stack |
 |`pstr`   | prints the string starting at the top of the stack |
+|`rotl`   | The top element of the stack becomes the last one, and the second top element of the stack becomes the first one |
 
 ## Author
 **Twitter:** https://twitter.com/_ELOUARDY \
