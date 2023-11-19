@@ -13,6 +13,10 @@ void process_instruction(void)
 	if (sd.opcode == NULL) /* blank line */
 		return;
 
+	/* check if line is a comment */
+	if (sd.opcode[0] == '#')
+		return;
+
 	/*
 	 * printf("%d -> opcode = %s | arg = %s\n", sd.nb_line, \
 	 * sd.opcode, sd.arg);
