@@ -55,6 +55,7 @@ Execute the interpreter by providing the Monty ByteCode file as an argument.
 |`push`   | Pushes an element to the stack |
 |`pall`   | Prints all the values on the stack, starting from the top |
 |`pint`   | Prints the value at the top of the stack |
+|`pop`    | Removes the top element of the stack |
 
 ## Author
 **Twitter:** https://twitter.com/_ELOUARDY \

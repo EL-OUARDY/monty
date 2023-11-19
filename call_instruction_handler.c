@@ -12,6 +12,7 @@ void call_instruction_handler(char *opcode, char *arg)
 		{"push", push_func},
 		{"pall", pall_func},
 		{"pint", pint_func},
+		{"pop", pop_func},
 	};
 	(void)arg;
 
