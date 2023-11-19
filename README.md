@@ -57,6 +57,7 @@ Execute the interpreter by providing the Monty ByteCode file as an argument.
 |`pint`   | Prints the value at the top of the stack |
 |`pop`    | Removes the top element of the stack |
 |`swap`   | swaps the top two elements of the stack |
+|`add`    | adds the top two elements of the stack |
 
 ## Author
 **Twitter:** https://twitter.com/_ELOUARDY \
