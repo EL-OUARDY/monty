@@ -67,6 +67,7 @@ void call_instruction_handler(char *opcode, char *arg);
 /* opcode handlers */
 void push_func(stack_t **stack, unsigned int line_number);
 void pall_func(stack_t **stack, unsigned int line_number);
+void pint_func(stack_t **stack, unsigned int line_number);
 
 /* stack operations */
 void push_stack(stack_t **head, int value);

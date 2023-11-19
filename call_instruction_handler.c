@@ -11,6 +11,7 @@ void call_instruction_handler(char *opcode, char *arg)
 	instruction_t op_codes[] = {
 		{"push", push_func},
 		{"pall", pall_func},
+		{"pint", pint_func},
 	};
 	(void)arg;
 
