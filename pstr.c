@@ -13,31 +13,17 @@ void pstr_func(stack_t **stack, unsigned int line_number)
 
 	(void)line_number;
 
-	/* check if stack is empty */
-	if (*stack == NULL)
-	{
-		printf("\n");
-		return;
-	}
-
 	_stack = *stack;
 
 	while (_stack)
 	{
 		integer = _stack->n;
-		/* check if the integer value falls within the valid ASCII range */
-		if (integer > 0 && integer <= 127)
-		{
-			printf("%c", integer);
-			_stack = _stack->next;
-		}
-		else /* not in ascii table OR integer equals 0 */
-		{
-			printf("\n");
-			return;
-		}
+		/* check if the integer value is outside of ASCII range */
+		if (integer > 127 || integer <= 0)
+			break;
+
+		printf("%c", integer);
+		_stack = _stack->next;
 	}
-	printf("\n");
+	printf("\n"); /* empty stack OR stack loop is over */
 }
-
-
