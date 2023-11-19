@@ -21,6 +21,7 @@ void call_instruction_handler(char *opcode, char *arg)
 		{"mul", mul_func},
 		{"mod", mod_func},
 		{"pchar", pchar_func},
+		{"pstr", pstr_func},
 	};
 	(void)arg;
 
