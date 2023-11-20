@@ -65,7 +65,8 @@ Execute the interpreter by providing the Monty ByteCode file as an argument.
 |`mod`    | computes the rest of the division of the second top element of the stack by the top element of the stack |
 |`pchar`  | prints the char at the top of the stack |
 |`pstr`   | prints the string starting at the top of the stack |
-|`rotl`   | The top element of the stack becomes the last one, and the second top element of the stack becomes the first one |
+|`rotl`   | the top element of the stack becomes the last one, and the second top element of the stack becomes the first one |
+|`rotr`   | The last element of the stack becomes the top element of the stack |
 
 ## Author
 **Twitter:** https://twitter.com/_ELOUARDY \

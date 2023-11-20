@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * rotl_func - rotates the stack to the top
+ * rotl_func - top becomes the last, 2nd top of the stack becomes the first
  * @stack: double pointer to the stack
  * @line_number: line number of the instruction
  * Return: void

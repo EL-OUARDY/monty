@@ -23,6 +23,7 @@ void call_instruction_handler(char *opcode, char *arg)
 		{"pchar", pchar_func},
 		{"pstr", pstr_func},
 		{"rotl", rotl_func},
+		{"rotr", rotr_func},
 	};
 	(void)arg;
 
