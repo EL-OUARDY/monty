@@ -24,19 +24,19 @@ void call_instruction_handler(char *opcode, char *arg)
 		{"pstr", pstr_func},
 		{"rotl", rotl_func},
 		{"rotr", rotr_func},
+		{"stack", stack_switch_func},
+		{"queue", queue_switch_func},
 	};
 	(void)arg;
 
-	/* get ops array size */
-	array_size = sizeof(op_codes) / sizeof(op_codes[0]);
+	array_size = sizeof(op_codes) / sizeof(op_codes[0]); /* opcodes array size */
 
 	/* loop over op_codes array to find a match */
 	for (i = 0; i < array_size; i++)
 	{
 		if (strcmp(op_codes[i].opcode, opcode) == 0)
 		{
-			/* call the handler */
-			op_codes[i].f(&sd.stack, sd.nb_line);
+			op_codes[i].f(&sd.stack, sd.nb_line); /* call the handler */
 			return;
 		}
 	}

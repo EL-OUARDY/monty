@@ -8,6 +8,10 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+/* data format */
+#define STACK_MODE 0
+#define QUEUE_MODE 1
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -46,6 +50,7 @@ typedef struct instruction_s
  * @opcode: instruction code
  * @arg: instruction argument
  * @file: bytecode instruction file
+ * @mode: 0 for stack, 1 for queue
  * Description: carries shared data across the program
  */
 typedef struct shared_data_s
@@ -56,6 +61,7 @@ typedef struct shared_data_s
 	char *opcode;
 	char *arg;
 	FILE *file;
+	int mode;
 } shared_data_t;
 extern shared_data_t sd; /* extern global variable */
 
@@ -80,9 +86,13 @@ void pchar_func(stack_t **stack, unsigned int line_number);
 void pstr_func(stack_t **stack, unsigned int line_number);
 void rotl_func(stack_t **stack, unsigned int line_number);
 void rotr_func(stack_t **stack, unsigned int line_number);
+void stack_switch_func(stack_t **stack, unsigned int line_number);
+void queue_switch_func(stack_t **stack, unsigned int line_number);
 
 /* stack operations */
 void push_stack(stack_t **head, int value);
+/* queue operations */
+void push_queue(stack_t **head, int value);
 
 
 /* helper functions */
@@ -92,6 +102,6 @@ int is_numeric(const char *str);
 void free_stack(stack_t *head);
 
 /* shared_data struct intializer */
-#define SHARED_DATA_INIT { NULL, NULL, 0, NULL, NULL, NULL }
+#define SHARED_DATA_INIT { NULL, NULL, 0, NULL, NULL, NULL, 0 }
 #endif
 

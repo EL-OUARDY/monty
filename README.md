@@ -18,8 +18,10 @@ The primary objective of this endeavor is to construct an interpreter capable of
 `process.c`: functions related to the processing of instructions. \
 `call_instruction_handler.c`: function that determinate which handler to call. \
 `stack_ops.c`: holds stack manipulation functions. \
+`queue_ops.c`: contains queue manipulation functions. \
 `memory.c`: contains clean up functions. \
 `helper_functions.c`: containes some shared utility functions. \
+`switch_mode.c`: functions to switch data format (LIFO, FIFO) \
 `[opcode handlers]`: each function in a separate file, such as **push**, **pall** \
 `/bytecodes`: directory containes *".m"* test files.
 
@@ -66,7 +68,9 @@ Execute the interpreter by providing the Monty ByteCode file as an argument.
 |`pchar`  | prints the char at the top of the stack |
 |`pstr`   | prints the string starting at the top of the stack |
 |`rotl`   | the top element of the stack becomes the last one, and the second top element of the stack becomes the first one |
-|`rotr`   | The last element of the stack becomes the top element of the stack |
+|`rotr`   | the last element of the stack becomes the top element of the stack |
+|`stack`  | set data format to stack LIFO |
+|`queue`  | set data format to queue FIFO |
 
 ## Author
 **Twitter:** https://twitter.com/_ELOUARDY \

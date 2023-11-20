@@ -21,6 +21,9 @@ void push_func(stack_t **stack, unsigned int line_number)
 	}
 
 	value = atoi(sd.arg); /* convert argument to integer */
-	push_stack(stack, value); /* insert to the stack */
+	if (sd.mode == STACK_MODE)
+		push_stack(stack, value); /* insert to the stack */
+	else /* queue */
+		push_queue(stack, value); /* insert to the queue */
 }
 
